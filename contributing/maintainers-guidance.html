@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Maintainers Guidance | PnP Samples </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Maintainers Guidance | PnP Samples ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="description" content="A sample gallery of scripts to manage all things Microsoft 365.">
+  
+    <!-- Social Media -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="Maintainers Guidance | PnP Samples ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pnp.github.io/script-samples">
+    <meta property="og:image" content="https://pnp.github.io/script-samples/assets/social-media-screenshot.png">
+    <meta property="og:image:alt" content="Screenshot example of the PnP Script Samples Site">
+    <meta property="og:site_name" content="PnP Script Samples">
+    <meta property="og:description" content="A sample gallery of scripts to manage all things Microsoft 365.">
+  
+    <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/extra.css">
+    <link rel="stylesheet" href="../styles/filter.css">
+    <link rel="stylesheet" href="../styles/site.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "8j6pedl344");
+  </script>
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+             <div class="github-mark">
+              <a href="https://github.com/pnp/script-samples">
+                <img src="https://pnp.github.io/script-samples/assets/icons/github-light-64px.png" alt="GitHub Icon Image">
+              </a>
+            </div>
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../assets/logo.svg" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-12">
+            <article class="content wrap" id="_content" data-uid="">
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/ToddKlindt/script-samples/blob/main/docfx/contributing/maintainers-guidance.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+                    <h1 id="maintainers-guidance">Maintainers Guidance</h1>
+
+<p>This is the maintainers guide to provide a location to share knowledge about how the site works and some of the behaviors of the setup and underlying configuration.</p>
+<p>The site uses the DocFx engine, this is the same tool that <a href="https://docs.microsoft.com">docs.microsoft.com</a> uses (albeit a special version) in combination with the Material UI + UI tweaks we have made with the help and thanks for Hugo Bernier.</p>
+<p>In addition, plugins have been developed to extend DocFx to generate the galleries.</p>
+<p>The main goal with DocFx builds must complete with <strong>0 warnings and errors</strong>. The site will not publish/update if there are warnings.</p>
+<h2 id="front-matter-for-gallery-pages">Front Matter for Gallery Pages</h2>
+<p>A small amount of front matter is used to tag the pages to inject the gallery into.</p>
+<h3 id="generate-galleries">Generate galleries</h3>
+<table>
+<thead>
+<tr>
+<th>Front Matter Example</th>
+<th>Action taken by Plugin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plugin: insert-gallery</td>
+<td>Inserts a gallery into the page that contains this marker: &quot;<em>--this will be auto generated--</em>&quot; the generator will replace this line with the gallery.</td>
+</tr>
+<tr>
+<td>plugin: add-to-gallery</td>
+<td>Registers the sample is ready to be added to the gallery</td>
+</tr>
+<tr>
+<td>plugin-filter: product</td>
+<td>Changes the gallery presentation mode. <br> None = by operation, product = By Product and library = by library</td>
+</tr>
+</tbody>
+</table>
+<p>Currently, there are 3 pages that galleries are used:</p>
+<ul>
+<li>Index.md - default gallery page</li>
+<li>bytool.md - By Library gallery page e.g. M365 CLI, PnP PS, Graph PS SDK etc.</li>
+<li>byproduct.md - By Product e.g. Microsoft Product the script performs an action against</li>
+</ul>
+<h4 id="initial-state">Initial State</h4>
+<p>Initially there are features in the sample generation that prevent it from showing in the gallery, allowing commits to be created and then readied with subsequent commits.</p>
+<pre><code class="lang-markdown">---
+plugin: add-to-gallery-preparation
+---
+</code></pre>
+<p>To show in the gallery simply update to &quot;plugin: add-to-gallery&quot;.</p>
+<h2 id="folder-structure-for-scripts">Folder Structure for scripts</h2>
+<p>We have worked to keep the folder structure lean and as simple as possible when submitting scripts:</p>
+<p><img src="../assets/contributing/folder-structure.png" alt="Folder Structure"></p>
+<h2 id="naming-and-casing">Naming and casing</h2>
+<p>DocFx is case sensitive with the markdown files and in compilation of the site, to make this easier, all sample file paths etc. should be in lowercase to avoid any issues with linking to files.</p>
+<p>Spaces should be replaced with hyphens as well.</p>
+<h2 id="images-and-previews">Images and previews</h2>
+<p>When creating images and previews, please follow this guidance:</p>
+<ul>
+<li>Favor the product UI change, close up of the affect element if preferred, to reduce the updates</li>
+<li>If delete, show a before image and indicate what is being removed.</li>
+<li>Terminal is less favorable because it would only show output of 1 of the three types of script that could run.</li>
+<li>PNG format preferred, JPG can be submitted, though these will be converted to PNG.</li>
+</ul>
+<p>If only example images are shown, Paul Bullock has a tool to convert in bulk.</p>
+<h2 id="recognizing-contributors">Recognizing contributors</h2>
+<p>When samples are submitted it is important that contributors are recognized for their contributions as without them the library would not grow, this is done in the following ways:</p>
+<ul>
+<li>Their name on the sample. If we as a maintainer also contributes to the article, they must be the primary or first name.</li>
+<li>The article must list their name, company and GitHub/LinkedIn/Twitter handle - we will encourage their complete this.</li>
+<li>Promotion to Twitter - their sample will get promoted to Twitter for exposure.</li>
+</ul>
+<img src="https://pnptelemetry.azurewebsites.net/script-samples/contributing/maintainers-guidance" aria-hidden="true">
+</article>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Script Samples<br>Generated by <strong><a href='https://dotnet.github.io/docfx' alt='Doc FX Website'>DocFX</a></strong> with <strong><a href='https://ovasquez.github.io/docfx-material' alt='DocFx Material Theme'>Material UI</a></strong></span>
+            
+            <!-- <img src="https://telemetry.sharepointpnp.com/@pnp.github.io/index/" alt="spacer"> -->
+          </div>
+        </div>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    <script type="text/javascript" src="../styles/clipboard.min.js"></script>
+    <script type="text/javascript" src="../styles/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="../styles/loadsamples.js"></script>
+    <script type="text/javascript" src="../styles/filtersamples.js"></script>
+
+  </body>
+</html>

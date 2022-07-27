@@ -60,9 +60,20 @@ a {
 button:hover,
 button:focus,
 a:hover,
-a:focus {
+a:focus{
   color: var(--highlight-light);
-  text-decoration: none;
+}
+
+button:hover,
+button:focus,
+a:hover,
+a:focus,
+.sample-inner:not() {
+  text-decoration: underline;
+}
+
+.article p a{
+  text-decoration: underline;
 }
 
 .toc .nav > li.active > a {
@@ -351,7 +362,7 @@ p {
 }
 
 .content p {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 0;
   word-wrap: break-word;
 }
@@ -371,15 +382,15 @@ p {
 }
 
 pre {
-  /* font-size: .875rem; */
+  font-size: .9em;
   overflow: auto;
-  border: 1px solid hsla(0,0%,89%,1);
-  border: 1px solid #e3e3e3;
+  /* border: 1px solid hsla(0,0%,89%,1);
+  border: 1px solid #e3e3e3; */
   background-color: hsla(0,0%,98%,1);
   background-color: #fafafa;
   font-smooth: auto;
-  padding: 1rem;
-  margin: 1rem 0 0;
+  /* padding: 1rem;
+  margin: 1rem 0 0; */
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
@@ -531,8 +542,10 @@ code {
   cursor: pointer;
   border-radius: 2px;
   border:1px solid #edebe9;
-  transition: box-shadow 0.5s ease 0s;
+  /* transition: box-shadow 0.5s ease 0s; */
   overflow: hidden;
+
+  /* transition: background 0.4s, box-shadow 0.4s; */
 }
 
 .sample-item:hover {
@@ -638,6 +651,7 @@ code {
 .article{
   padding-top:0;
   margin-top:0;
+  margin-bottom: 75px;
 }
 
 @media screen and (max-width: 767px) {
@@ -655,11 +669,170 @@ code {
     margin-top: 12px;
   }
 
-
+  footer .container{
+    padding: 0px 10px;
+  }
+  
+  .article{
+    margin-bottom: 75px;
+  }
 }
 
-header,
-footer{
+header{
   position:inherit;
   z-index: unset;
+}
+
+
+#_content p img {
+  max-width: 60%;
+}
+
+#_content .sample-preview img {
+  max-width: 100%;
+}
+
+.tabGroup section[role="tabpanel"]{
+  padding-top: 0;
+  border: 0;
+  position: relative;
+}
+
+.table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+  border: 1px solid #efefef;
+}
+
+/* Clipboard */
+.article-clipboard {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 0;
+}
+
+.article-clipboard__message {
+  display: inline-table;
+  padding: 0.6rem 1rem;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.54);
+  color: white;
+  font-size: 1.28rem;
+  white-space: nowrap;
+}
+
+.tabGroup section[role="tabpanel"]{
+  overflow: unset;
+}
+
+span.done {
+  position: absolute;
+  top: 0; 
+  right: 3.4rem;
+  text-align: center;
+  opacity: 0;
+  transition: all .500s;
+}
+span.copied {
+  opacity: 1;
+}
+
+/* Highlighting and Tab Group Tweaks */
+
+.highlight-tool{
+  background-color: #E3F2F2;
+  border-top: 1px solid #D8E6E6;
+  padding: 10px;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.highlight-tool p{
+  margin-top: 0;
+}
+
+pre{
+  margin-bottom: 0;
+}
+
+.tabGroup {
+  margin-top: 3rem;
+}
+
+.tabGroup a[role="tab"]:hover, .tabGroup a[role="tab"]:focus, .tabGroup a[role="tab"][aria-selected="true"] {
+  border-bottom: 2px solid var(--highlight-light);
+}
+
+.tabGroup a[role="tab"]:hover, .tabGroup a[role="tab"]:focus{
+  color: var(--highlight-light);
+}
+
+.full-image-size p img{
+  max-width: 100% !important;
+}
+
+.sample-description{
+  font-family: Roboto, sans-serif;
+}
+
+p.sample-title {
+  margin-top: 0.2em;
+  margin-top: 0.2em;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box !important;
+}
+
+@media screen and (max-width: 385px) {
+  p.sample-title {
+    -webkit-line-clamp: 2;
+  }
+}
+
+
+.producttype-item:first-child{
+  z-index: 50;
+}
+
+.producttype-item:nth-of-type(2),
+.producttype-item:not(:first-child) { 
+  margin-left: 40px;
+  z-index: 40;
+}
+
+.producttype-item:nth-of-type(3){
+  margin-left: 73px !important;
+  z-index: 30;
+}
+
+.producttype-item:nth-of-type(4){
+  margin-left: 96px !important;
+  z-index: 20;
+}
+
+.producttype-item{
+  -webkit-box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.05);
+}
+
+.cmd-help{
+  border-bottom: 1px dotted var(--highlight-dark);;
+}
+
+/* GitHub Mark */
+.github-mark{
+  float:right;
+}
+.github-mark img{
+  height: 45px;
+  margin-top: 5px;
 }

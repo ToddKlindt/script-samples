@@ -63,7 +63,15 @@ function loadSample(sample, filter) {
         var authorsGitHub = "";
         var productTag = sample.products[0].toLowerCase();
         var productName = sample.products[0];
+        //var library = metadata[0].key.toLowerCase();
 
+        var tools  = "";
+        var toolCount = 0;
+        metadata.forEach(library =>{
+          var toolToUse = library.key.toLowerCase();
+          tools = tools + `<div class="producttype-item ${toolToUse} tool-${toolCount}">${toolToUse}</div>`;
+          toolCount++;
+        });
 
         // Build the authors array
         if (authors.length < 1) {
@@ -106,15 +114,17 @@ function loadSample(sample, filter) {
 
         // Build the HTML to insert
         var $items = $(`
-<a class="sample-thumbnail" href="${sample.url}" data-modified="${sample.modified}" data-title="${title}" data-keywords="${keywords}" data-tags="${tags}" data-libraries="${libraries}" data-operation="${operations}" data-products="${products}">
+<a class="sample-thumbnail" href="${sample.url}" data-modified="${sample.updateDateTime}" data-title="${title}" data-keywords="${keywords}" data-tags="${tags}" data-libraries="${libraries}" data-operation="${operations}" data-products="${products}">
   <div class="sample-inner">
     <div class="sample-preview">
       <img src="${thumbnail}" loading="lazy" alt="${title}">
     </div>
     <div class="sample-details">
-      <div class="producttype-item ${productTag}">${productName}</div>
-      <p class="sample-title" title="${sample.title}">${sample.title}</p>
-      <p class="sample-description" title='${escapedDescription}'>${shortDescription}</p>
+      ${tools}
+      <div class="sample-text">
+        <p class="sample-title" title="${sample.title}">${sample.title}</p>
+        <p class="sample-description" title='${escapedDescription}'>${shortDescription}</p>
+      </div>
       <div class="sample-activity">
         ${authorAvatars}
         <div class="activity-details">
