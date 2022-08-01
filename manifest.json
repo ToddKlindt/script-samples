@@ -2814,6 +2814,52 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../scripts/spo-bulk-publish-syntex-model/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "spo-bulk-publish-syntex-model/README.html",
+          "hash": "/YNC0qwsSK8c5s3KTFtrYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": "",
+      "plugin": "add-to-gallery"
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../scripts/spo-bulk-publish-syntex-model/assets/example.png",
+      "output": {
+        "resource": {
+          "relative_path": "spo-bulk-publish-syntex-model/assets/example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../scripts/spo-bulk-publish-syntex-model/assets/preview.png",
+      "output": {
+        "resource": {
+          "relative_path": "spo-bulk-publish-syntex-model/assets/preview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../scripts/spo-bulk-publish-syntex-model/assets/sample.json",
+      "output": {
+        "resource": {
+          "relative_path": "spo-bulk-publish-syntex-model/assets/sample.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../scripts/spo-cleanup-site-column-usage/README.md",
       "output": {
         ".html": {
@@ -3909,6 +3955,52 @@
       "output": {
         "resource": {
           "relative_path": "spo-export-termstore-terms-to-csv/assets/sample.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../scripts/spo-extract-and-invoke-site-template/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "spo-extract-and-invoke-site-template/README.html",
+          "hash": "tnXlrWkOTol7H9WYY5JzGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": "",
+      "plugin": "add-to-gallery"
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../scripts/spo-extract-and-invoke-site-template/assets/example.png",
+      "output": {
+        "resource": {
+          "relative_path": "spo-extract-and-invoke-site-template/assets/example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../scripts/spo-extract-and-invoke-site-template/assets/preview.png",
+      "output": {
+        "resource": {
+          "relative_path": "spo-extract-and-invoke-site-template/assets/preview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../scripts/spo-extract-and-invoke-site-template/assets/sample.json",
+      "output": {
+        "resource": {
+          "relative_path": "spo-extract-and-invoke-site-template/assets/sample.json"
         }
       },
       "is_incremental": false,
@@ -8453,7 +8545,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdusage.html",
-          "hash": "F7GueBBMYghWvoTXi44Fzg=="
+          "hash": "mslHEF45zCY2Ll7K4SO+Tg=="
         }
       },
       "is_incremental": false,
@@ -8562,7 +8654,7 @@
       "output": {
         ".html": {
           "relative_path": "matrix.html",
-          "hash": "rshuhB2+TYAZsfLsYtxVag=="
+          "hash": "l6+C8wpgj5S56uGo9k1GfA=="
         }
       },
       "is_incremental": false,
@@ -8574,7 +8666,7 @@
       "output": {
         ".html": {
           "relative_path": "metadata.html",
-          "hash": "W0JcXO64NihELsooCdLZCQ=="
+          "hash": "xfvvX8pZQ6uxz154eaRghA=="
         }
       },
       "is_incremental": false,
