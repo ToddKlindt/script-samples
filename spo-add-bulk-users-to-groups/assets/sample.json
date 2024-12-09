@@ -9,7 +9,7 @@
       "Add bulk users to SharePoint site groups by reading CSV."
     ],
     "creationDateTime": "2022-07-05",
-    "updateDateTime": "2022-07-05",
+    "updateDateTime": "2024-01-22",
     "products": [
       "SharePoint"
     ],
@@ -17,6 +17,14 @@
       {
         "key": "PNP-POWERSHELL",
         "value": "1.10.0"
+      },
+      {
+        "key": "SPO-MANAGEMENT-SHELL",
+        "value": "16.0.21116.12000"
+      },
+      {
+          "key":"CLI-FOR-MICROSOFT365",
+          "value":"7.3.0"
       }
     ],
     "categories": [
@@ -24,10 +32,20 @@
       "Security"
     ],
     "tags": [
-      "Add-PnPGroupMember",
       "Connect-PnPOnline",
+      "Add-PnPGroupMember",
       "Get-PnPGroup",
-      "Get-PnPGroupMember"
+      "Get-PnPGroupMember",
+      "Connect-SPOService",
+      "Get-SPOSite",
+      "Get-SPOUser",
+      "Add-SPOUser",
+      "m365 status",
+      "m365 login",
+      "m365 spo group get",
+      "m365 spo group member list",
+      "m365 spo group member add",
+      "m365 logout"
     ],
     "thumbnails": [
       {
@@ -38,6 +56,12 @@
       }
     ],
     "authors": [
+      {
+        "gitHubAccount": "ganesh-sanap",
+        "company": "",
+        "pictureUrl": "https://avatars.githubusercontent.com/u/25476310?v=4",
+        "name": "Ganesh Sanap"
+      },
       {
         "name": "Chandani Prajapati",
         "gitHubAccount": "chandaniprajapati",
@@ -50,6 +74,16 @@
         "name": "Want to learn more about PnP PowerShell and the cmdlets",
         "description": "Check out the PnP PowerShell site to get started and for the reference to the cmdlets.",
         "url": "https://aka.ms/pnp/powershell"
+      },
+      {
+        "name": "Introduction to the SharePoint Online Management Shell",
+        "description": "Check out the SPO Management Shell documentation site to get started and for the reference to the cmdlets.",
+        "url": "https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell"
+      },
+      {
+        "name": "Want to learn more about CLI for Microsoft 365 and the commands",
+        "description": "Check out the CLI for Microsoft 365 site to get started and for the reference to the commands.",
+        "url": "https://aka.ms/cli-m365"
       }
     ]
   }
